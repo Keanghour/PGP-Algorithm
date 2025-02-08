@@ -7,7 +7,7 @@ Pretty Good Privacy (PGP) is a widely-used encryption program that provides cryp
 
 ---
 
-<strong>Socials:</strong>
+<strong>Socials for Let me know if this works!:  </strong>
 <a href="https://t.me/phokeanghour" target="_blank" rel="noreferrer">
     <img src="https://www.vectorlogo.zone/logos/telegram/telegram-ar21.svg" />
   </a>
