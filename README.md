@@ -7,14 +7,6 @@ Pretty Good Privacy (PGP) is a widely-used encryption program that provides cryp
 
 ---
 
-<strong>Socials for Let me know if this works!:  </strong>
-<a href="https://t.me/phokeanghour" target="_blank" rel="noreferrer">
-    <img src="https://www.vectorlogo.zone/logos/telegram/telegram-ar21.svg" />
-  </a>
-<a href="https://www.linkedin.com/in/pho-keanghour-27133b21b/" target="_blank" rel="noreferrer">
-    <img src="https://www.vectorlogo.zone/logos/linkedin/linkedin-ar21.svg" />
-  </a>
-
 ---
 
 # PGP Algorithm - Java Encryption & Decryption
@@ -90,6 +82,15 @@ MIT License
 **Contact**:
 - Email: phokeanghour12@gmail.com
 - Telegram: @phokeanghour | 095 323 346
+
+
+<a href="https://t.me/phokeanghour" target="_blank" rel="noreferrer">
+    <img src="https://www.vectorlogo.zone/logos/telegram/telegram-ar21.svg" />
+  </a>
+
+<a href="https://www.linkedin.com/in/pho-keanghour-27133b21b/" target="_blank" rel="noreferrer">
+    <img src="https://www.vectorlogo.zone/logos/linkedin/linkedin-ar21.svg" />
+  </a>
 
 ---
 
