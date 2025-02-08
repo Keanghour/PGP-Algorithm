@@ -1,0 +1,122 @@
+# PGP Key Generator
+
+This project demonstrates how to generate and export PGP keys (both public and private) using the Bouncy Castle library. It includes the creation of an RSA key pair (with key sizes of 2048, 4096, etc.), along with exporting the keys to ASCII-armored files. Additionally, the private key is encrypted using a passphrase to ensure security.
+
+## Features
+- Generate RSA key pairs with customizable sizes (2048, 4096, etc.).
+- Export the public and private keys as ASCII-armored files.
+- Encrypt the private key with a passphrase for added security.
+
+## Prerequisites
+- Java 8 or higher.
+- Bouncy Castle library version 1.76 or 1.80. You can add Bouncy Castle dependencies to your `pom.xml` (if using Maven):
+
+For **Bouncy Castle 1.76**:
+```xml
+<dependency>
+    <groupId>org.bouncycastle</groupId>
+    <artifactId>bcpkix-jdk18on</artifactId>
+    <version>1.76</version>
+</dependency>
+<dependency>
+    <groupId>org.bouncycastle</groupId>
+    <artifactId>bcprov-jdk18on</artifactId>
+    <version>1.76</version>
+</dependency>
+```
+
+For **Bouncy Castle 1.80**:
+```xml
+<dependency>
+    <groupId>org.bouncycastle</groupId>
+    <artifactId>bcpkix-jdk18on</artifactId>
+    <version>1.80</version>
+</dependency>
+<dependency>
+    <groupId>org.bouncycastle</groupId>
+    <artifactId>bcprov-jdk18on</artifactId>
+    <version>1.80</version>
+</dependency>
+```
+
+## How to Use
+
+### 1. Clone or Download the Repository
+
+Make sure to have the project files in your local directory.
+
+### 2. Compile and Run the Java Program
+
+The main class is `PGPKeyGenerator`. It generates an RSA key pair and exports both the public and private keys. Follow these steps:
+
+#### Step 1: Set the Key Paths and Identity
+
+In the `main` method, define the path for your key files and the identity for the key pair.
+
+```java
+String publicKeyPath = "";
+String privateKeyPath = "";
+String identity = "";
+char[] passphrase = "".toCharArray();
+int keySize = 2048;  // Set the key size (2048, 4096, etc.)
+```
+
+- `publicKeyPath`: Path where the public key will be saved.
+- `privateKeyPath`: Path where the private key will be saved.
+- `identity`: Identity for the key (e.g., your email).
+- `passphrase`: The passphrase used to encrypt the private key.
+- `keySize`: The RSA key size (2048, 4096, etc.).
+
+#### Step 2: Run the Program
+
+Execute the program. The keys will be generated and saved to the specified file paths. 
+
+### Example Command:
+
+```bash
+java PGPKeyGenerator
+```
+
+After successful execution, you will see the following output:
+
+```
+Keys generated successfully!
+Public Key: xxx/xxxx/xxxxx.xxx
+Private Key: xxx/xxxx/xxxxx.xxx
+```
+
+### 3. Files Generated
+
+- **Public Key**: Saved as `publicKey.asc`.
+- **Private Key**: Saved as `privateKey.asc` (encrypted with the passphrase).
+
+## Code Explanation
+
+1. **Key Generation**: 
+   - `generateKeyPair()` uses the RSA algorithm to generate a key pair with the specified size (e.g., 2048-bit, 4096-bit).
+   
+2. **Exporting Keys**:
+   - `exportPublicKey()` saves the public key in ASCII-armored format.
+   - `exportPrivateKey()` saves the private key in ASCII-armored format and encrypts it using the provided passphrase.
+
+3. **Passphrase Encryption**:
+   - The private key is encrypted using the `JcePBESecretKeyEncryptorBuilder`, ensuring that the key is protected.
+
+## Customization
+
+- You can modify the key size by changing the `keySize` parameter when calling `generateKeyPair()` (e.g., `keyPairGenerator.initialize(4096)` for a 4096-bit key).
+- To change the algorithm or encryption method, you can adjust the `PGPKeyPair` and `PBESecretKeyEncryptor` configurations.
+
+## License
+
+This project is open-source and can be freely used or modified.
+
+---
+
+**Contact:**
+- Email: phokeanghour12@gmail.com
+- Telegram: 095 323 346 | @phokeanghour
+
+---
+
+**Credit**: This project was created by **Pho Keanghour**.
